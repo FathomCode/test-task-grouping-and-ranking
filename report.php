@@ -28,6 +28,12 @@ function validate($events) {
 	    "message" => ""
 	);
 
+	if (!is_array($event['user_id'])) {
+		header( 'HTTP/1.1 400 Bad Request' );
+		$error['message'] = "Error: events is not array";
+		die(json_encode($error));
+	}
+
 	foreach ($events as $event) {
 		if (!isset($event['user_id']) || !is_numeric($event['user_id'])) {
 			header( 'HTTP/1.1 400 Bad Request' );
@@ -194,8 +200,8 @@ function output($users) {
 
 $input = file_get_contents('php://input');
 
-$input = json_decode($input, true);
-$events = $input['events'];
+@$input = json_decode($input, true);
+@$events = $input['events'];
 
 
 validate($events);
