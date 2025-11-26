@@ -17,43 +17,24 @@
  
 
     {
-      "events": [ 
-        { 
-          "user_id": 101, 
-          "type": "view", 
-          "timestamp": 1712123400 
-        }, 
-        { 
-          "user_id": 101, 
-          "type": "click", 
-          "timestamp": 1712123460 
-        }, 
-        { 
-          "user_id": 102, 
-          "type": "purchase", 
-          "timestamp": 1712123500 
+      "events": [
+        {
+          "user_id": 101,
+          "type": "view",
+          "timestamp": 1712123400
         },
-        { 
-          "user_id": 106, 
-          "type": "view", 
-          "timestamp": 1712123400 
-        }, 
-        { 
-          "user_id": 106, 
-          "type": "click", 
-          "timestamp": 1712123460 
-        }, 
-        { 
-          "user_id": 106, 
-          "type": "view", 
-          "timestamp": 1712123461 
-        }, 
-        { 
-          "user_id": 106, 
-          "type": "purchase", 
-          "timestamp": 1712123660 
+        {
+          "user_id": 101,
+          "type": "click",
+          "timestamp": 1712123460
+        },
+        {
+          "user_id": 102,
+          "type": "purchase",
+          "timestamp": 1712123500
         }
-      ] 
+        // ... до 1000 событий 
+      ]
     }
 
 ### Гарантии:
